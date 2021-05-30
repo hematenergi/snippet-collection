@@ -1,0 +1,170 @@
+{
+	// add console.info
+	"Console Info": {
+		"prefix": "clin",
+		"body": [
+			"console.info($1)",
+			"$2"
+		],
+		"description": "Info output to console"
+	},
+	// create ternary operator
+	"Ternary Operator": {
+		"prefix": [
+			"ter",
+			"tern",
+			"terna",
+			"ternary"
+		],
+		"body": [
+			"${0:varname} = ${1:condition} ? ${2:true} : ${3:false} ;"
+		],
+		"description": "Ternary Operator"
+	},
+	// Nullish Coalescing
+	"Nullish Value": {
+		"prefix": "nullish,null,nuc",
+		"body": [
+			"${1|const,let|} ${2:varname} = ${3:parameter} ?? ${4:default value} ;"
+		],
+		"description": "Nullish Value"
+	},
+	// Name Function
+	"Named Function": {
+		"prefix": "nfn",
+		"body": [
+			"function ${1:functionName}($2) {",
+			"  $3",
+			"}"
+		],
+		"description": "Named Function"
+	},
+	// Anonymous Function
+	"Anonymous Function": {
+		"prefix": "fn",
+		"body": [
+			"function() {",
+			"  $2",
+			"}"
+		],
+		"description": "Anonymous Function"
+	},
+	// Arrow Function
+	"Arrow Function": {
+		"prefix": [
+			"arf",
+			"fun"
+		],
+		"body": [
+			"const ${1:functionName} = ($2) => {",
+			"return $3",
+			"}",
+			"$4"
+		],
+		"description": "arrow function"
+	},
+	// Create array opimize for string
+	"Array Creator": {
+		"prefix": [
+			"arr",
+			"create array"
+		],
+		"body": [
+			"let ${1:nameArray} = [$2,$3,$4,$5,$6,$7,$8,$0]"
+		],
+		"description": "Array Creator"
+	},
+	// call array method
+	"Array method": {
+		"prefix": "arm",
+		"body": [
+			"${1|ForEach,map,filter,reduce,some|}((${2:item})=>{",
+			"  $3",
+			"})"
+		],
+		"description": "Array method"
+	},
+	// doing some axios request
+	"Axios Request": {
+		"prefix": "axreq",
+		"body": [
+			"axios.${1|get,post,put,delete|}(${2:url})",
+			"  .then(res => console.log(res.data))",
+			"  .catch(err => console.log(err));"
+		],
+		"description": "Axios Request"
+	},
+	// fetch request
+	"Fetch Request": {
+		"prefix": "fetchreq",
+		"body": [
+			"fetch('${1:url}')",
+			"  .then(res => res.json())",
+			"  .then(data => console.log(data));"
+		],
+		"description": "Fetch Request"
+	},
+	// async await fetch
+	"asfetchreq": {
+		"prefix": "Async Await Fetch",
+		"body": [
+			"const request = async ($1) => {",
+			"    const response = await fetch('${2:url}');",
+			"    const data = await response.json();",
+			"    console.log(data);",
+			"}"
+		],
+		"description": "Fetch Async/Await"
+	},
+	// node require or import module
+	"Node Require": {
+		"prefix": "node",
+		"body": "const ${1:import} = require('${module}');",
+		"description": "Require a Node.js module"
+	},
+	// express server
+	"Express Server": {
+		"prefix": "expsrv",
+		"body": [
+			"const express = require('express');",
+			"",
+			"const app = express();",
+			"",
+			"app.${1|get,post,put,delete|}('${2:route}', (req, res) => {",
+			"  $3",
+			"});",
+			"",
+			"const PORT = process.env.PORT || ${4|3000,5000,8000,8080|};",
+			"",
+			"app.listen(PORT, () => console.log(`Server Running On Port ${PORT}`));"
+		],
+		"description": "Express Server"
+	},
+	// express route
+	"Express Route": {
+		"prefix": "exrou",
+		"body": "app.${1|get,post,put,delete|}('${3:/}', (req, res) => {});",
+		"description": "Express Route"
+	},
+	// express init middleware
+	"Express Init Middleware": {
+		"prefix": "exmid",
+		"body": "app.use(${1:middleware});",
+		"description": "Express Middleware"
+	},
+	// class creator
+	"Class Creator": {
+		"prefix": [
+			"class, cls, kelas"
+		],
+		"body": [
+			"class ${1:Anak} {",
+			"  constructor($2) {",
+			"    $3",
+			"  }",
+			"}",
+			"$4"
+		],
+		"description": "Class Creator"
+	}
+}
