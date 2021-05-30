@@ -1,5 +1,5 @@
 {
-	// add console.info
+	// add console.info cli
 	"Console Info": {
 		"prefix": "clin",
 		"body": [
